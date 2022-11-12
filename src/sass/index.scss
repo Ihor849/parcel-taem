@@ -1,2 +1,10 @@
-@import './common';
-@import './example';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+@import './base/base';
+@import './components/btn';
+
+@import './layout/header';
+@import './layout/logo';
+@import './layout/nav';
+@import './layout/contacts';
+@import './components/hero';
+
