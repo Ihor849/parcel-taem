@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
@@ -16,10 +19,10 @@
       <include src="./partials/hero.html"></include>
 
       <!-- team -->
-      <include src=""></include>
+      <include src="./partials/swiper.html"></include>
 
       <!-- products -->
-      <include src=""></include>
+      <include src="./partials/cowerflow.html"></include>
 
       <include src=""></include>
     </main>
@@ -29,5 +32,51 @@
 
     <!-- modal -->
     <include src=""></include>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- <script>
+      const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  // loop: true,
+
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+    </script> -->
+    <script>
+      var swiper = new Swiper(".coverflow", {
+        effect: "coverflow",
+        // direction: "vertical",
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>
